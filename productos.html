@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroforestal</title>
+    <link rel="stylesheet" href="/estilos/productos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/imagenes2/Iconopng.png">
+    <script src="https://kit.fontawesome.com/e3f67c66e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="cabecera">
+        <h1>Café Agroforestal Eco</h1>
+        <p>Producción familiar orgánica de café molido y en grano.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="quienessomos.html">¿Quiénes Somos?</a></li>
+            <li><a href="clubcafe.html">Club Del Café</a></li>
+            <li><a href="admin.html">Administradores</a></li>
+        </ul>
+    </nav>
+
+    </nav>
+
+<main>
+    <article>
+        <h2>Conocé nuestros productos:</h2>  
+            <table class="tabla-estilos">
+                    <thead>
+                        <tr>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>                
+                            <th>Precio</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos"> </tbody>
+    </table>
+
+    <div class="menu">
+        <a href="admin.html">Menu principal</a>
+    </div>
+
+    <script>
+        const URL = "http://127.0.0.1:5000/"
+        //const URL = "https://Marina369.pythonanywhere.com/"
+
+        fetch(URL + 'productos')
+            .then(function (response) {
+                if (response.ok) {return response.json(); }
+            })
+            .then(function (data) {
+                let tablaProductos = document.getElementById('tablaProductos');
+
+                for (let producto of data) {
+                    let fila = document.createElement('tr');
+                    fila.innerHTML = 
+                        '<td>' + producto.descripcion + '</td>' +
+                        '<td align="right">' + producto.cantidad + '</td>' +
+                        '<td align="right">' + producto.precio + '</td>' +
+                        '<td><img src=./imagenes2/' + producto.imagen_url +' alt="Imagen del producto" style="width: 100px;"></td>';
+                    tablaProductos.appendChild(fila);
+                }
+            })
+            .catch(function (error) {
+                alert('Error al obtener los productos.');
+            });
+    </script>
+    </article>
+</main>
+
+</body>
+
+<footer id="piedepagina">
+    <div class="Contacto">
+        <h3>¡Contactanos!</h3>
+    </div>
+    <div id="iconos">
+        <i class="fa-solid fa-envelope"> info@cafeagroforestal.com</i>
+        <i class="fa-brands fa-whatsapp"> +54 9 11 00000000</i>
+        <i class="fa-brands fa-linkedin"> Linkedin/cafeagroforestaleco</i>
+    </div>
+
+
+</footer>
+</html>

@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(36, 36, 36);
+    font-family: 'Roboto', sans-serif;
+}
+
+.cabecera {
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    padding-bottom: 30px;
+    border-bottom: 2px solid #dec282;
+}
+
+nav ul {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    font-size: 1.5vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: aliceblue;
+    background-color: rgb(62, 53, 38);
+}
+
+nav ul li a:hover {
+    transform: translateY(+10px);
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+    background-color: #dec282;
+    color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    font-weight: 10;
+    color:#dec282;
+    background-color: rgb(27, 27, 27);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+h2 {
+    text-align: center;
+    color:rgb(62, 53, 38);
+    font-style: bold;
+    background-color: #dec282;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 60px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+p {
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+    color: aliceblue;
+    padding: 10px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.tabla-estilos {
+    margin:auto;
+    margin-top: 50px;
+    border-collapse: collapse;
+    width: 70%;
+    border: 2px solid #dec282;
+    background-color: rgb(28, 28, 28);
+    color: aliceblue;
+    text-align: center;
+}
+
+tr td {
+    padding-top: 30px;
+    color: #dec282;
+}
+
+img:hover {
+    cursor: pointer;
+    transition: 0.5s ease;
+    width: 210px;
+    opacity: 1;
+    filter: contrast(100%);
+}
+
+#iconos {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    color: #dec282;
+    margin: 20px 10%;
+}
+
+
+#piedepagina {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 10px;
+    border: 0px transparent rgb(0, 0, 0);
+    margin-top: 30px;
+    padding: 5%;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+h3 {
+    color: #fff;
+    font-style: italic;
+}
+
+a {
+    padding: 8px;
+    margin:4px;
+    background-color: #dec282;
+    color: rgb(62, 53, 38);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 85%;
+}
+
+a:hover {
+    background-color: #cd7b00;
+}
+
+.menu {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-weight: 10;
+    color:#dec282;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

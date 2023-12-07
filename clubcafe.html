@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroforestal</title>
+    <link rel="stylesheet" href="/estilos/clubcafe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/imagenes2/Iconopng.png">
+    <script src="https://kit.fontawesome.com/e3f67c66e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <header class="cabecera">
+            <h1>Café Agroforestal Eco</h1>
+            <p>Producción familiar orgánica de café molido y en grano.</p>
+    </header>
+
+
+    <script src="/java/validaciónForm1.js"></script>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="quienessomos.html">¿Quiénes Somos?</a></li>
+            <li><a href="clubcafe.html">Club Del Café</a></li>
+            <li><a href="admin.html">Administradores</a></li>
+        </ul>
+    </nav>
+    <div>
+        <img src="/imagenes2/portada.jpg" alt="foto decorativa de produccion cafetera" id="imagen-formulario">
+    </div>
+    
+    <main>
+        <h2>El Club Del Café</h2>
+        <p>Descubre una experiencia única para amantes del café con nuestra suscripción exclusiva. Únete a nosotros y disfruta de descuentos especiales en tus compras en línea, emocionantes muestras de sabores nuevos que te transportarán a lugares lejanos, y sorprendentes regalos que recibirás cada ciertos meses.
+        <br><br>No sólo estás comprando café, estás adentrándote en un mundo de aromas y sabores únicos que te acompañarán en cada taza.</p>
+        <p>Únete a nuestra comunidad de amantes del café y comienza tu viaje sensorial hoy.</p>
+    
+        <section>
+            <form action="" name="formulario" method="get">
+                
+                <label for="nombre">Nombre:</label>
+                <input 
+                    type="text" 
+                    name="nombre" 
+                    placeholder="Ingrese nombre" 
+                    id="nombre"
+                    minlength="3"
+                    maxlength="10"
+                    title="Campo requerido"
+                    required><br><br>
+
+                <label for="apellido">Apellido:</label>
+                <input 
+                    type="text" 
+                    name="apellido" 
+                    placeholder="Ingrese apellido" 
+                    id="apellido"
+                    minlength="3"
+                    maxlength="20"
+                    title="Campo requerido"
+                    required><br><br>
+
+                <label for="edad">Edad:</label>
+                <input 
+                    type="text" 
+                    name="edad" 
+                    id="edad" 
+                    placeholder="Ingrese edad" 
+                    maxlength="2"
+                    title="Campo requerido"
+                    required><br><br>
+                
+                <label for="mail">Correo electrónico:</label>
+                <input 
+                    type="email" 
+                    name="mail" 
+                    id="mail"
+                    placeholder="Ingrese una dirección de email"
+                    title="Campo requerido"
+                    size="30"
+                    required><br><br>
+
+                <label for="okmail">Confirmar correo electrónico:</label>
+                <input 
+                    type="email" 
+                    name="okmail" 
+                    id="okmail"
+                    placeholder="Repita la dirección de email ingresada"
+                    title="Campo requerido"
+                    size="30"
+                    required><br><br>
+
+                <label for="pregunta">¿Cómo nos conociste?</label>
+                <select 
+                    name="pregunta" 
+                    id="pregunta"
+                    title="Seleccione una opción"
+                    required>
+                        <option value="default">Seleccionar una opción</option>
+                        <option value="RRSS">A través de Redes Sociales</option>
+                        <option value="Conocido">Por recomendación de un conocido</option>
+                        <option value="Otros">Otros medios</option>
+                </select>
+                <br><br>
+                
+                <label for="otrosmedios">¿A través de qué otros medios escuchaste sobre nosotros?</label> <br><br>
+                <textarea id="otrosmedios" maxlength="60" placeholder="Contanos más" title="Este campo es opcional"></textarea>
+                <br><br>
+                <label for="terminos">
+                <input type="checkbox" name="terminos" id="terminos" required>Acepto los Términos y Condiciones
+                <br><br>
+
+                <input type="submit" id="Enviar" name="Enviar" value="¡Suscribirme!" onclick="validarFormulario()">
+
+            </form>
+        </section>
+    </main>
+</body>
+
+<footer id="piedepagina">
+    <div class="Contacto">
+        <h3>¡Contactanos!</h3>
+    </div>
+    <div id="iconos">
+        <i class="fa-solid fa-envelope"> info@cafeagroforestal.com</i>
+        <i class="fa-brands fa-whatsapp"> +54 9 11 00000000</i>
+        <i class="fa-brands fa-linkedin"> Linkedin/cafeagroforestaleco</i>
+    </div>
+
+
+</footer>
+</html>
